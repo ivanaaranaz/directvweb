@@ -296,7 +296,7 @@ li {
 /*     Information     */
 /***********************/
 .information .container-fluid .row div:first-child {
-	background-color: var(--primary);
+	background-color: white;
 }
 
 .information .container-fluid .row div:last-child {
@@ -304,7 +304,7 @@ li {
 }
 
 .information .container-fluid .row div:nth-child(2) {
-	background-color: var(--primary-light);
+	background-color: white;
 }
 
 
