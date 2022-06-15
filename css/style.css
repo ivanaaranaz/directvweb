@@ -86,9 +86,11 @@ li {
 	height: 110vh;
 	position: relative;
 }
-
-.services,
 .work,
+.plans,
+.services {
+	background-color: white; }
+
 .contact,
 .testimonial,
 .footer {
@@ -96,13 +98,11 @@ li {
 }
 
 .about,
-.plans,
 .company,
 .newsletter,
 .location {
 	background-color: var(--primary-light);
 }
-
 .bottom {
 	background-color: black;
 }
@@ -328,6 +328,22 @@ li {
 	font-weight: normal;
 }
 
+.btn1 {
+	color: white;
+	border-radius: 0;
+	border-width: 2px;
+	padding: 10px 30px;
+	border-image-slice: 1;
+	background-image: none;
+	background: #f16704;
+	border-image-source: var(--gradient);
+	box-shadow: 5px 5px 0px 0px var(--secondary);
+	font-family: 'Curve';
+	src: url('../webfonts/DIRECTV\ Curve\ -\ Light.otf') format('woff2'),
+		url('../webfonts/DIRECTV\ Curve\ -\ Light.otf') format('woff2');
+	font-style: normal;
+	font-weight: normal;
+}
 .btn:hover {
 	color: white;
 	box-shadow: none;
@@ -381,7 +397,7 @@ li {
 .services .card {
 	padding: 20px;
 	border-radius: 0;
-	border: 2px solid white;
+	border: 2px solid #051166;
 }
 
 .services .card:hover {
