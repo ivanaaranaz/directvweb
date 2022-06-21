@@ -20,9 +20,13 @@ Table Of Contents:
 /**************************/
 /*     General Styles     */
 /**************************/
+html {
+	font-size: 95%;
+}
+
 :root {
 	--primary: #0e0639;
-	--primary-light: #76797b;
+	--primary-light: #0d0553;
 	--secondary: #051166;
 	--tertiary: #f7a306;
 	--primary2: white;
@@ -52,7 +56,7 @@ h6 {
 }
 
 h1 {
-	font-size: 60px;
+	font-size: 55px;
 	font-weight: 500;
 }
 
@@ -71,6 +75,8 @@ h4 {
 a {
 	color: white;
 	text-decoration: none;
+	font-family: "Curve", sans-serif;
+	src: local("Curve"), url('../webfonts/DIRECTV\ Curve\ -\ Regular.otf') format('woff2');
 }
 
 li {
@@ -79,12 +85,24 @@ li {
 
 /* Section Background */
 .home,
-.about,
-.services,
-.plans,
+.services {
+	height: 110vh;
+	position: relative;
+}
+
 .work,
 .contact {
-	height: 110vh;
+	height: 85vh;
+	position: relative;
+}
+
+.plans {
+	height: 90vh;
+	position: relative;
+}
+
+.about {
+	height: 70vh;
 	position: relative;
 }
 
@@ -103,14 +121,8 @@ li {
 	background-color: black;
 }
 
-.work {
-	background-color: white;
-}
-
-.plans {
-	background-color: white;
-}
-
+.plans,
+.work,
 .contact {
 	background-color: white;
 }
@@ -288,7 +300,7 @@ li {
 /*     Home     */
 /****************/
 .home {
-	background-image: url(../assets/images/home.jpg);
+	background-image: url(../assets/images/home2.jpg);
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -324,15 +336,25 @@ li {
 /*     Button     */
 /******************/
 .btn {
-	color: white;
-	border-radius: 0;
-	border-width: 2px;
-	padding: 10px 30px;
-	border-image-slice: 1;
-	background-image: none;
-	background: transparent;
-	border-image-source: var(--gradient);
-	box-shadow: 5px 5px 0px 0px var(--secondary);
+	background: #f16704;
+    border: 2px solid #FFA900;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 1;
+    margin-bottom: 0;
+    padding: 10px 20px;
+    text-align: center;
+    text-transform: unset;
+    touch-action: manipulation;
+    transition: all 0.3s ease 0s;
+    vertical-align: middle;
+    white-space: nowrap;
+    box-shadow: 2.783px 19.805px 20px 0px rgb(70 53 208 / 12%);
 	font-family: 'Curve';
 	src: url('../webfonts/DIRECTV\ Curve\ -\ Light.otf') format('woff2'),
 		url('../webfonts/DIRECTV\ Curve\ -\ Light.otf') format('woff2');
@@ -340,9 +362,9 @@ li {
 	font-weight: normal;
 }
 
-.btn1 {
+.btn1[type="summit"] {
 	color: white;
-	border-radius: 0;
+	border-radius: 25px;
 	border-width: 2px;
 	padding: 10px 30px;
 	border-image-slice: 1;
@@ -355,6 +377,7 @@ li {
 		url('../webfonts/DIRECTV\ Curve\ -\ Light.otf') format('woff2');
 	font-style: normal;
 	font-weight: normal;
+	
 }
 
 .btn:hover {
@@ -362,7 +385,12 @@ li {
 	box-shadow: none;
 	border-radius: 0;
 	padding: 10px 30px;
-	transform: translate(5px, 5px);
+	text-transform: unset;
+    touch-action: manipulation;
+    transition: all 0.3s ease 0s;
+}
+.btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
 }
 
 /* Email - Newsletter Button */
@@ -437,6 +465,35 @@ li {
 .navbar .dropdown .dropdown-menu {
 	animation: fadeDropdown 0.2s;
 	/* required for the fade animation */
+}
+
+/*boton whatsapp*/
+#scrollUp {
+	background: #FFA900;
+	height: 50px;
+	width: 45px;
+	right: 50px;
+	bottom: 77px;
+	color: #fff;
+	font-size: 20px;
+	text-align: center;
+	border-radius: 5px;
+	font-size: 20px;
+	line-height: 50px;
+}
+
+.btn-whatsapp {
+	display: block;
+	width: 70px;
+	height: 70px;
+	color: #fff;
+	position: fixed;
+	right: 100px;
+	bottom: 75px;
+	border-radius: 50%;
+	line-height: 80px;
+	text-align: center;
+	z-index: 999;
 }
 
 @-webkit-keyframes fadeDropdown {

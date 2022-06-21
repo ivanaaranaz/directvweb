@@ -128,3 +128,7 @@ AOS.init({
     easing: "ease",
     once: true, // whether animation should happen only once - while scrolling down
 });
+
+function myFunction() {
+    Swal.fire('Sus datos han sido enviados correctamente', '', 'success');
+  }
